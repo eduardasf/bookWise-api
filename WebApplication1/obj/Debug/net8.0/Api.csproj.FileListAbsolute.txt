@@ -1,0 +1,7 @@
+C:\Users\ireni\source\repos\WebApplication1\WebApplication1\obj\Debug\net8.0\Api.csproj.AssemblyReference.cache
+C:\Users\ireni\source\repos\WebApplication1\WebApplication1\obj\Debug\net8.0\Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ireni\source\repos\WebApplication1\WebApplication1\obj\Debug\net8.0\Api.AssemblyInfoInputs.cache
+C:\Users\ireni\source\repos\WebApplication1\WebApplication1\obj\Debug\net8.0\Api.AssemblyInfo.cs
+C:\Users\ireni\source\repos\WebApplication1\WebApplication1\obj\Debug\net8.0\Api.csproj.CoreCompileInputs.cache
+C:\Users\ireni\source\repos\WebApplication1\WebApplication1\obj\Debug\net8.0\Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ireni\source\repos\WebApplication1\WebApplication1\obj\Debug\net8.0\Api.MvcApplicationPartsAssemblyInfo.cache
