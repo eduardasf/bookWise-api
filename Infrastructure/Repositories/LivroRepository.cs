@@ -56,6 +56,7 @@ namespace Infrastructure.Repositories
         public Livro BuscarPorId(Guid id)
         {
             return _context.Livros
+                .Include(x => x.Categorias)
                 .Single(x => x.Id == id);
         }
 

@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(BookWiseDbContext))]
-    [Migration("20240813021412_Criar_Tabelas_Autor_Categoria_Livro")]
-    partial class Criar_Tabelas_Autor_Categoria_Livro
+    [Migration("20240828014156_Criar_Tabelas_Livros_Autores_Categorias")]
+    partial class Criar_Tabelas_Livros_Autores_Categorias
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,7 +52,7 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Dascricao")
+                    b.Property<string>("Descricao")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
@@ -72,6 +72,10 @@ namespace Infrastructure.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
+
+                    b.Property<string>("Codigo")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<Guid>("IdAutor")
                         .HasColumnType("uuid");

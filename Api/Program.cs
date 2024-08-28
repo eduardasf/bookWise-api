@@ -1,4 +1,7 @@
+using Domain.Handlers;
+using Domain.IRepositories;
 using Infrastructure.Data;
+using Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +16,13 @@ builder.Services.AddSwaggerGen();
 // Configure DbContext with PostgreSQL
 builder.Services.AddDbContext<BookWiseDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddTransient<LivroHandler, LivroHandler>();
+builder.Services.AddTransient<ILivroRepository, LivroRepository>();
+builder.Services.AddTransient<AutorHandler, AutorHandler>();
+builder.Services.AddTransient<IAutorRepository, AutorRepository>();
+builder.Services.AddTransient<CategoriaHandler, CategoriaHandler>();
+builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
 
 var app = builder.Build();
 

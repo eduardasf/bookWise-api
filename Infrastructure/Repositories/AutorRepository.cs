@@ -33,6 +33,7 @@ namespace Infrastructure.Repositories
         public Autor BuscarPorId(Guid id)
         {
             return _context.Autores
+                .Include(x => x.Livros)
                 .Single(x => x.Id == id);
         }
 

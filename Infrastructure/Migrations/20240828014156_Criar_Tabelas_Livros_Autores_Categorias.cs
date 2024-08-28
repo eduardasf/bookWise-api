@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Criar_Tabelas_Autor_Categoria_Livro : Migration
+    public partial class Criar_Tabelas_Livros_Autores_Categorias : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,7 +30,7 @@ namespace Infrastructure.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Nome = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
-                    Dascricao = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false)
+                    Descricao = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -42,6 +42,7 @@ namespace Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Codigo = table.Column<string>(type: "text", nullable: false),
                     Nome = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
                     Resumo = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
                     Idioma = table.Column<string>(type: "text", nullable: false),
